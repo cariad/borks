@@ -1,0 +1,37 @@
+{{ $base_width  := .base_width }}
+{{ $base_height := .base_height }}
+
+{{ $images_bundle := .context.Site.Params.images | default "/images" }}
+
+{{ $images   := .context.Site.GetPage $images_bundle }}
+{{ $resource := $images.Resources.GetMatch .id }}
+
+{{ $anchor        := $resource.Params.anchor | default "Smart" }}
+{{ $alt           := $resource.Params.alt }}
+{{ $render_width  := $resource.Width }}
+{{ $render_height := $resource.Height }}
+{{ $src           := $resource.RelPermalink }}
+
+{{ $srcset := "" }}
+
+{{ range (slice 1 2 3 4) }}
+  {{ $width := mul $base_width . }}
+
+  {{ if gt $resource.Width $width }}
+
+    {{ if ne $srcset "" }}
+      {{ $srcset = printf "%s," $srcset }}
+    {{ end }}
+
+    {{ $height := mul $base_height . }}
+    {{ $param  := printf "%dx%d %s webp" $width $height $anchor}}
+    {{ $img    := $resource.Fill $param }}
+    {{ $srcset  = printf "%s %s %dx" $srcset $img.RelPermalink . }}
+
+  {{ end }}
+{{ end }}
+
+<img alt="{{ $alt }}"
+     height="{{ $base_height }}"
+     srcset="{{ $srcset }}"
+     width="{{ $base_width }}" />

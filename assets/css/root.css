@@ -1,0 +1,38 @@
+:root {
+  --accent: #FF6200;
+  --accent-light: #e89241;
+  --corner: 15px;
+  --dark: #2B2D42;
+  --inner-margin: 20px;
+
+  --vertical-margin: 80px;
+  --vertical-margin-medium: 60px;
+  --vertical-margin-small: 40px;
+
+  --large-summary-text-margin: 20px;
+  --side-summary-text-margin: 20px;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-weight: 500;
+  text-align: justify;
+}
+
+header a {
+  color: var(--dark);
+}

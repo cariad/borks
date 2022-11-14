@@ -1,0 +1,46 @@
+article header {
+  margin-bottom: var(--vertical-margin-medium);
+}
+
+article header * {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+article .byline {
+  font-size: 1rem;
+}
+
+article#single header picture {
+  margin-bottom: var(--vertical-margin);
+}
+
+#page_side article header picture {
+  margin-bottom: 10px;
+}
+
+article#single .title {
+  font-size: 3rem;
+  font-weight: 900;
+
+  margin-bottom: 30px;
+}
+
+article#single .title,
+article#single .byline {
+  text-align: center;
+}
+
+article#single .title,
+article#single .byline,
+article#single p {
+  padding-left: var(--inner-margin);
+  padding-right: var(--inner-margin);
+
+  max-width: 650px;
+  margin-inline: auto;
+}
+
+article#single p {
+  line-height: 1.4;
+}

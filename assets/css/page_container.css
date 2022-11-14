@@ -1,0 +1,20 @@
+#page_container {
+  --gap-width: 20px;
+
+  background-color: white;
+  display: grid;
+
+  grid-template:
+    "page_header"
+    "page_menu"
+    "page_content"
+    "page_footer"
+    "page_side"
+    / 100%;
+
+  column-gap: var(--gap-width);
+
+  margin-inline: auto;
+
+  width: fit-content;
+}

@@ -1,0 +1,65 @@
+{{ $images_bundle := .context.Site.Params.images | default "/images" }}
+{{ $images        := .context.Site.GetPage $images_bundle }}
+
+{{ $resource      := $images.Resources.GetMatch .id }}
+
+{{ $alt           := $resource.Params.alt }}
+{{ $anchor        := $resource.Params.anchor | default "Smart" }}
+{{ $render_height := $resource.Height }}
+{{ $render_width  := $resource.Width }}
+{{ $src           := $resource.RelPermalink }}
+
+{{/* Thin + narrow */}}
+
+{{ $narrow_base_width  := 800 }}
+{{ $narrow_base_height := 1200 }}
+{{ $narrow_srcset := "" }}
+
+{{ range (slice 1 2 3 4) }}
+  {{ $width := mul $narrow_base_width . }}
+
+  {{ if gt $resource.Width $width }}
+    {{ if ne $narrow_srcset "" }}
+      {{ $narrow_srcset = printf "%s," $narrow_srcset }}
+    {{ end }}
+
+    {{ $height            := mul $narrow_base_height . }}
+    {{ $webp_param        := printf "%dx%d %s webp" $width $height $anchor }}
+    {{ $webp_img          := $resource.Fill $webp_param }}
+    {{ $narrow_srcset = printf "%s %s %dx" $narrow_srcset $webp_img.RelPermalink . }}
+  {{ end }}
+{{ end }}
+
+{{/* Wide + short */}}
+
+{{ $wide_base_width  := 900 }}
+{{ $wide_base_height := 600 }}
+{{ $wide_srcset := "" }}
+
+{{ range (slice 1 2 3 4) }}
+  {{ $width := mul $wide_base_width . }}
+
+  {{ if gt $resource.Width $width }}
+    {{ if ne $wide_srcset "" }}
+      {{ $wide_srcset = printf "%s," $wide_srcset }}
+    {{ end }}
+
+    {{ $height          := mul $wide_base_height . }}
+    {{ $webp_param      := printf "%dx%d %s webp" $width $height $anchor }}
+    {{ $webp_img        := $resource.Fill $webp_param }}
+    {{ $wide_srcset = printf "%s %s %dx" $wide_srcset $webp_img.RelPermalink . }}
+  {{ end }}
+{{ end }}
+
+<picture>
+  <source
+    media="(min-width: 900px)"
+    srcset="{{ $wide_srcset }}"
+    type="image/webp"
+  />
+
+  <img
+    srcset="{{ $narrow_srcset }}"
+    alt="{{ $alt }}"
+  />
+</picture>

@@ -1,0 +1,25 @@
+{{ $context := .context }}
+
+<article class="summary large">
+  <div class="overlay">
+    <div class="overlay_empty"></div>
+    <div class="overlay_content">
+      <a href="{{ .page.RelPermalink }}" title="{{ .Title }}">
+        <p class="byline">{{ .page.Date.Format "Monday 2 January, 2006" }}</p>
+        <h1 class="title">{{ .page.Title }}</h1>
+      </a>
+    </div>
+  </div>
+
+  {{ with .page.Params.image }}
+    {{
+      partial
+      "image.html"
+      (dict "base_height" 900
+            "base_width"  900
+            "context"    $context
+            "id"         .name
+      )
+    }}
+  {{ end }}
+</article>

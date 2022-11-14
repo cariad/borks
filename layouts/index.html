@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+  {{ $context := . }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Section" "blog") }}
+
+  {{ range $paginator.Pages }}
+    {{ partial "large_page_summary.html" (dict "context" $context "page" .)}}
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
+
+{{ end }}

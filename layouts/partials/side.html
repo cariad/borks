@@ -1,0 +1,7 @@
+{{ $context := . }}
+
+<section>
+  {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+    {{ partial "side_page_summary.html" (dict "context" $context "page" .)}}
+  {{ end }}
+</section>

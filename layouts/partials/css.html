@@ -1,0 +1,21 @@
+{{ $resources := slice }}
+
+{{ $resources = $resources | append (resources.Get "css/article.css") }}
+{{ $resources = $resources | append (resources.Get "css/body.css") }}
+{{ $resources = $resources | append (resources.Get "css/font-figtree.css") }}
+{{ $resources = $resources | append (resources.Get "css/header.css") }}
+{{ $resources = $resources | append (resources.Get "css/menu.css") }}
+{{ $resources = $resources | append (resources.Get "css/page_container.css") }}
+{{ $resources = $resources | append (resources.Get "css/page_content.css") }}
+{{ $resources = $resources | append (resources.Get "css/page_summary.css") }}
+{{ $resources = $resources | append (resources.Get "css/root.css") }}
+{{ $resources = $resources | append (resources.Get "css/side.css") }}
+
+{{ $resources = $resources | append (resources.Get "css/responsive.css") }}
+
+{{ $bundle := $resources | resources.Concat "style.css" }}
+{{ $css := $bundle | minify | fingerprint }}
+
+<link integrity="{{ $css.Data.Integrity }}"
+      href="{{ $css.RelPermalink }}"
+      rel="stylesheet" />

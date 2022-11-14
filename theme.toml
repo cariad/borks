@@ -1,0 +1,13 @@
+description = "The Hugo theme for cardboardborks.com"
+features = ["responsive"]
+homepage = "https://github.com/cariad/borks"
+license = "MIT"
+licenselink = "https://github.com/cariad/borks/blob/main/LICENSE"
+repo = "https://github.com/cariad/borks"
+tags = ["responsive"]
+min_version = 0.102
+name = "borks"
+
+[author]
+  name = "Cariad Eccleston"
+  homepage = "https://cariad.earth"
