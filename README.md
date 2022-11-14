@@ -102,4 +102,4 @@ Figtree is &copy; 2022 Erik Kennedy and redistributed under the [SIL Open Font L
 
 This theme is released under the [MIT Licence](/LICENSE) and remains the copyright of Cariad Eccleston. This grants you permission to use the theme without restriction as long as [the licence text](/LICENSE) is included with any copies that you redistribute.
 
-**Credit is not required, but a link to [cariad/borks](https://github.com/cariad/earth), [cardboardborks.com](https://cardboardborks.com) or [cariad.earth](https://cariad.earth) would be appreciated!&nbsp;🚀**
+**Credit is not required, but a link to [cariad/borks](https://github.com/cariad/borks), [cardboardborks.com](https://cardboardborks.com) or [cariad.earth](https://cariad.earth) would be appreciated!&nbsp;🚀**
