@@ -1,0 +1,9 @@
+#page_side {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
+
+#page_side article {
+  margin-bottom: 30px;
+}

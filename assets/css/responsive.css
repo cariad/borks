@@ -1,0 +1,60 @@
+/* iPad Mini portrait */
+/* (This is narrower than a landscape iPhone.) */
+@media screen and (min-width: 740px) {
+  :root {
+    --large-summary-text-margin: 40px;
+  }
+
+  .summary.large .title {
+    font-size: 3rem;
+  }
+}
+
+/* iPad Mini landscape */
+@media screen and (min-width: 1130px) {
+  :root {
+    --corner: 10px;
+    --inner-margin: 0 !important;
+  }
+
+  #page_container {
+    --content-width: 900px;
+    --side-width: 300px;
+    --margin: 100px;
+
+    grid-template:
+      "page_header  page_header"
+      "page_menu    page_menu"
+      "page_content page_side"
+      "page_footer  page_footer"
+      / 1fr var(--side-width);
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  article#single header img {
+    border-radius: var(--corner);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    background: var(--accent-light);
+  }
+
+  #page_container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  #page_header {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  #page_menu ol {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

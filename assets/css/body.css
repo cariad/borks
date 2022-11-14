@@ -1,0 +1,30 @@
+body {
+  background: white;
+  color: var(--dark);
+
+  font-family: "Figtree", sans-serif;
+  font-size: 1.4rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+#page_header {
+  grid-area: page_header;
+}
+
+#page_menu {
+  grid-area: page_menu;
+}
+
+#page_content {
+  grid-area: page_content;
+}
+
+#page_side {
+  grid-area: page_side;
+}
+
+#page_footer {
+  grid-area: page_footer;
+}
