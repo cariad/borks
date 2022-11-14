@@ -9,6 +9,7 @@ The Hugo theme for [cardboardborks.com](https://cardboardborks.com).
 - No JavaScript
 - OpenGraph
 - Emoji favicon
+- Fathom Analytics
 - Resizes and converts images to WebP
 - Featured images
 
@@ -26,6 +27,26 @@ theme = "borks"
 ```
 
 ## Configuration
+
+### Site
+
+In your `config.[toml|json|yaml]`:
+
+```toml
+# Your site's title.
+title = "Danny's Sausages"
+
+[params]
+# Full name of your site's author.
+author = "Danny Sausages"
+
+# URL to your site's logotype.
+banner = "/logotype.svg"
+
+# Fathom Analytics (referral link: https://usefathom.com/ref/TVWIFS) site ID.
+# Optional and defaults to no Fathom integration.
+fathom = "MACARONI"
+```
 
 ### Pages
 
