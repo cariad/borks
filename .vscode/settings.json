@@ -5,6 +5,7 @@
     "Figtree",
     "markdownify",
     "opengraph",
-    "plainify"
+    "plainify",
+    "shortcode"
   ]
 }

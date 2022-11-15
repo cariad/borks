@@ -98,6 +98,16 @@ resources:
 ---
 ```
 
+To embed this image in a page, use the `image` shortcode:
+
+```markdown
+Do you remember last year's ice cream parade?
+
+{{< image parade >}}
+
+It was so good!
+```
+
 ## Contributing
 
 Full contribution guidelines are in [CONTRIBUTING.md](CONTRIBUTING.md).
