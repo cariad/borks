@@ -36,16 +36,26 @@ In your `config.[toml|json|yaml]`:
 # Your site's title.
 title = "Danny's Sausages"
 
-[params]
+[Params]
 # Full name of your site's author.
 author = "Danny Sausages"
 
 # URL to your site's logotype.
 banner = "/logotype.svg"
 
+# Copyright notice.
+copyright = "Sausages' Sausages &copy; 1996 Danny Sausages"
+
 # Fathom Analytics (referral link: https://usefathom.com/ref/TVWIFS) site ID.
 # Optional and defaults to no Fathom integration.
 fathom = "MACARONI"
+
+[Params.socials]
+# Your site's email address.
+email = "danny@sausages.local"
+
+# Your site's Instagram username.
+instagram = "xxxxxxxdannysausagesxxxxxxx"
 ```
 
 ### Pages
