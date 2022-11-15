@@ -1,0 +1,20 @@
+nav.socials ol {
+  list-style: none;
+  padding: 0;
+}
+
+nav.socials li {
+  margin-bottom: 0.8rem;
+}
+
+nav.socials a {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  font-weight: 500;
+}
+
+nav.socials img {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
