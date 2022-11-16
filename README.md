@@ -50,6 +50,14 @@ copyright = "Sausages' Sausages &copy; 1996 Danny Sausages"
 # Optional and defaults to no Fathom integration.
 fathom = "MACARONI"
 
+# List of menu items.
+[[Params.menu]]
+# Menu item title.
+title = "Home"
+
+# Menu item URI.
+uri = "/"
+
 [Params.socials]
 # Your site's email address.
 email = "danny@sausages.local"
