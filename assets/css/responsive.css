@@ -8,6 +8,15 @@
   .summary.large .title {
     font-size: 3rem;
   }
+
+  article#single .title {
+    font-size: 6rem;
+  }
+
+  article#single > img,
+  article#single > p > img {
+    border-radius: var(--corner);
+  }
 }
 
 /* iPad Mini landscape */

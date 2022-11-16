@@ -12,7 +12,7 @@ article .byline {
 }
 
 article#single header picture {
-  margin-bottom: var(--vertical-margin);
+  margin-bottom: var(--vertical-margin-small);
 }
 
 #page_side article header picture {
@@ -20,10 +20,14 @@ article#single header picture {
 }
 
 article#single .title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 900;
 
   margin-bottom: 30px;
+}
+
+article#single .byline {
+  margin-bottom: var(--vertical-margin-small);
 }
 
 article#single .title,
@@ -37,8 +41,6 @@ article#single h2 {
 
 article#single > img,
 article#single > p > img {
-  border-radius: var(--corner);
-
   margin-inline: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;

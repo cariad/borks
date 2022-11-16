@@ -5,6 +5,15 @@
 
     <header>
 
+      <h1 class="title">{{ .Title | markdownify }}</h1>
+
+      <p class="byline">
+        {{ with $context.Site.Params.author }}
+          {{ . }} &bullet;
+        {{ end }}
+        {{ .Date.Format "Monday 2 January, 2006" }}
+      </p>
+
       {{ with .Params.image }}
         {{ partial
           "featured_image.html"
@@ -22,15 +31,6 @@
           )
         }}
       {{ end }}
-
-      <h1 class="title">{{ .Title | markdownify }}</h1>
-
-      <p class="byline">
-        {{ with $context.Site.Params.author }}
-          {{ . }} &bullet;
-        {{ end }}
-        {{ .Date.Format "Monday 2 January, 2006" }}
-      </p>
 
     </header>
 
