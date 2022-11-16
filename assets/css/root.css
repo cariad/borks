@@ -18,6 +18,11 @@ a {
   text-decoration: none;
 }
 
+em {
+  font-family: 'Sriracha', cursive;
+  font-style: normal;
+}
+
 picture {
   display: block;
 }

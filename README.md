@@ -118,6 +118,8 @@ Full contribution guidelines are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Figtree is &copy; 2022 Erik Kennedy and redistributed under the [SIL Open Font License](static/fonts/figtree/OFL.txt). <!-- cspell:disable-line -->
 
+Sriracha is &copy; 2015 Cadson Demak, Copyright &copy; 2014 Pablo Impallari and redistributed under the [SIL Open Font License](static/fonts/sriracha/OFL.txt). <!-- cspell:disable-line -->
+
 ### Theme
 
 This theme is released under the [MIT Licence](/LICENSE) and remains the copyright of Cariad Eccleston. This grants you permission to use the theme without restriction as long as [the licence text](/LICENSE) is included with any copies that you redistribute.
