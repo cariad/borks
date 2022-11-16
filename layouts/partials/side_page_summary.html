@@ -12,14 +12,21 @@
   </div>
 
   {{ with .page.Params.image }}
-    {{
-      partial
-      "image.html"
-      (dict "base_height" 500
-            "base_width"  300
-            "context"    $context
-            "id"         .name
+    {{ partial
+      "featured_image.html"
+      (dict
+        "context"      $context
+        "id"           .name
+
+        "narrow_width"    400
+        "narrow_height"   200
+
+        "wide_width"      400
+        "wide_height"     500
+
+        "wide_threshold" 1130
       )
     }}
   {{ end }}
+
 </article>

@@ -8,8 +8,8 @@
     "page_header"
     "page_menu"
     "page_content"
-    "page_footer"
     "page_side"
+    "page_footer"
     / 100%;
 
   column-gap: var(--gap-width);

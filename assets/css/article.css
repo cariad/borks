@@ -31,8 +31,24 @@ article#single .byline {
   text-align: center;
 }
 
+article#single h2 {
+  margin-top: 3rem;
+}
+
+article#single > img,
+article#single > p > img {
+  border-radius: var(--corner);
+
+  margin-inline: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  width: 650px;
+}
+
 article#single .title,
 article#single .byline,
+article#single h2,
 article#single p {
   padding-left: var(--inner-margin);
   padding-right: var(--inner-margin);
@@ -42,5 +58,5 @@ article#single p {
 }
 
 article#single p {
-  line-height: 1.4;
+  line-height: 1.6;
 }
