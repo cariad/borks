@@ -9,7 +9,6 @@
 
 #page_menu a {
   color: var(--accent);
-  font-size: 1rem;
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -19,7 +18,8 @@
   flex-flow: row nowrap;
   gap: 20px;
 
-  margin-top: 6px;
+  margin-top: 10px;
+  margin-left: 10px;
 
   padding: 0;
 }
