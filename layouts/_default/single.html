@@ -6,7 +6,7 @@
     <header>
 
       {{ with .Params.image }}
-        {{ partial "featured-image.html" (dict "context" $context "id" .name) }}
+        {{ partial "featured_image.html" (dict "context" $context "id" .name) }}
       {{ end }}
 
       <h1 class="title">{{ .Title | markdownify }}</h1>
